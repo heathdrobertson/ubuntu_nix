@@ -1,10 +1,22 @@
-docker build -t heathrobertson/nix:latest .
+# Ubuntu with Nix
+__A `Nix` environment running on an Ubuntu Docker image.__
 
+
+With a `defualt.nix` file in your current working dirrectory, create a docker container:
+
+```bash
+export CONTAINER_NAME=<change_me>
+```
+
+```bash
 docker run -it \
---name nix-python \
--v $(pwd):/home/ci  \
+--name ${CONTAINER_NAME} \
+--volume $(pwd):/home/ci  \
 heathrobertson/nix
+```
 
 
-#CMD ["nix-shell", "--command", "jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888"]
+## heathrobertson/nix:latest
+
+
 
