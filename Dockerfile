@@ -1,4 +1,7 @@
 FROM ubuntu:latest
+ENV TZ=America/Denver
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 SHELL ["/bin/bash", "-c"]
 # An Ubuntu variant of the Alpine Linux Build: https://hub.docker.com/r/nixos/nix/dockerfile
 
