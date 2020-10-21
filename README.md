@@ -12,7 +12,7 @@ export CONTAINER_NAME=<change_me>
 docker run -it \
 --name ${CONTAINER_NAME} \
 --volume $(pwd):/home/ci  \
-heathrobertson/nix
+heathdrobertson/nix
 ```
 
 
